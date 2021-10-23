@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoAppJS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="front">
+            <div class="frontHead">
+                <div class="headTask"><p><span class="headT">Task</span><span class="headList">List</span></p></div>
+                <div class="btnPlus" onclick="togClose()"><p><i class="fas fa-plus-circle" id="plus"></i> <span class="addHead">Add Item</span></p></div>
+            </div>
+            <div class="que"></div>
+            <div class="noItem">No Items in the todo list</div>
+        </div>
+    </div>
+    <div class="pu1 popup" id="pop1">
+        <div>
+            <p class="pop1-head1">Add New List</p>
+        </div>
+        <div>
+            <input type="text" id="pop1-input" placeholder="Add New List">
+        </div>
+        <div>
+            <button onclick="todoAdd()" class="btn">Add</button>
+            <button onclick="togClose()" class="btn">Close</button>
+        </div>
+    </div>
+    <div class="pu1 popup" id="pop2">
+        <div>
+            <p class="pop1-head1">Add New Item</p>
+        </div>
+        <div>
+            <input type="text" id="subList" placeholder="Add New Item">
+        </div>
+        <div>
+            <button onclick="addsubList(this)" class="btn">Add</button>
+            <button onclick="togClose2(false)" class="btn">Close</button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

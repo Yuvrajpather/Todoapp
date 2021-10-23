@@ -1,0 +1,386 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+.main.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+    transition: 100ms;
+}
+
+.front {
+    width: 40%;
+}
+
+.frontHead {
+    width: 250%;
+    height: 100px;
+    margin: 5% 0%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+.headT {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.headList {
+    margin-left: 10px;
+    font-weight: lighter;
+    font-size: 50px;
+}
+
+.btnPlus {
+    cursor: pointer;
+}
+
+#plus {
+    color: #4b8ce8;
+    font-size: 35px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.que {
+    width: 900px;
+    position: absolute;
+    top: 150px;
+    left: 225px;
+    gap: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.noItem {
+    font-weight: lighter;
+    font-size: 34px;
+    margin-left: 46%;
+    width: 800px;
+}
+
+.pu1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    position: fixed;
+    top: 40%;
+    left: 35%;
+    width: 445px;
+    height: 226px;
+    border: 1px solid #e74c3c;
+    border-radius: 10px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 10px 10px 10px #00000029;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    color: black;
+}
+
+#pop1.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 30%;
+}
+
+.pop1-head1 {
+    color: #ff0000;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 10px;
+}
+
+input {
+    width: 320px;
+    height: 43px;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000029;
+    opacity: 1;
+    text-align: center;
+}
+
+.btn {
+    color: white;
+    background: #e74c3c;
+    width: 101px;
+    height: 43px;
+    margin: 10px;
+    font-size: 0.8em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 1;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#pop2.active {
+    visibility: visible;
+    top: 30%;
+    opacity: 1;
+    transition: 500ms;
+}
+
+.tab2 {
+    color: black;
+    width: 200px;
+    min-height: 300px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #e74c3c;
+    box-shadow: 3px 5px 7px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head3 {
+    color: #e74c3c;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.hr {
+    width: 200px;
+    border: 0.5px solid grey;
+    margin: 0;
+    margin-top: -45px;
+}
+
+.subList2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn2 {
+    width: 190px;
+    gap: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+#btn-2 {
+    background-color: white;
+    outline: none;
+    border: none;
+}
+
+.addHead {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.todoList, .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.list1 {
+    width: 150px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subList3 {
+    color: black;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.markCut {
+    color: white;
+    background-color: #4287f5;
+    width: 90px;
+    height: 24px;
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#delete {
+    color: #ffffff;
+    background-color: #e74c3c;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Responsive */
+
+@media screen and ( min-width : 300px) and (max-width : 650px) {
+    body {
+        margin: 0;
+        position: relative;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .frontHead {
+        width: 200%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .headT {
+        font-size: 10vw;
+        margin-left: 30%;
+    }
+
+    .headList {
+        font-size: 9vw;
+    }
+
+    .que {
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: 150%;
+        left: 10%;
+    }
+
+    #delete {
+        width: 7vw;
+        height: 7vw;
+        font-size: 3vw;
+        box-sizing: border-box;
+    }
+
+    #plus {
+        font-size: 7vw;
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .addHead {
+        display: none;
+    }
+
+    .noItem {
+        font-size: 5vw;
+        width: 200%;
+        margin-left: 30%;
+    }
+
+    input {
+        font-size: 5vw;
+        width: 100%;
+        height: 120%;
+    }
+
+    .btn {
+        width: 80px;
+        height: 40px;
+        font-size: 4vw;
+        margin-top: 10%;
+    }
+
+    .popup {
+        position: fixed;
+        left: 10%;
+        width: 80%;
+        height: 40%;
+    }
+
+    .pop1-head1 {
+        font-size: 8vw;
+    }
+
+    .head3 {
+        font-size: 7vw;
+        margin-top: 4vw;
+        color: #6a6a72;
+        font-weight: normal;
+    }
+
+    .btn2 {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        gap: 2%;
+        margin-left: 40%;
+        margin-bottom: 5%;
+    }
+
+    .hr {
+        width: 100%;
+    }
+
+    .subList2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .subList3 {
+        font-size: 5vw;
+        color: #6a6a72;
+        margin-right: 2vw;
+    }
+
+    .tab2 {
+        width: 66%;
+        min-height: 70vw;
+        border-radius: 5%;
+    }
+
+    .markCut {
+        font-size: 3vw;
+        width: 40%;
+        height: 100%;
+        margin-left: 2vw;
+    }
+}
